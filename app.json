@@ -3,7 +3,8 @@
     "pages/real_index/real_index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/settings/settings"
+    "pages/settings/settings",
+    "pages/shop/shop"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,5 +16,27 @@
   "useExtendedLib": {
     "kbone": true,
     "weui": true
+  },
+  "tabBar":{
+    "selectedColor": "#000000",
+    "list": [{
+      "pagePath": "pages/real_index/real_index",
+      "text": "社群",
+      "iconPath": "images/zhihu-fill.png",
+      "selectedIconPath": "images/zhihu-fill-hl.png"
+    },
+    {
+      "pagePath": "pages/shop/shop",
+      "text": "签售",
+      "iconPath": "images/book-3-line.png",
+      "selectedIconPath": "images/book-3-line-hl.png"
+    },
+    {
+      "pagePath": "pages/settings/settings",
+      "text": "我的",
+      "iconPath": "images/home-2-line.png",
+      "selectedIconPath": "images/home-2-line-hl.png"
+    }]
+
   }
 }

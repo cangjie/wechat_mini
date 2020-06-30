@@ -1,12 +1,11 @@
-// pages/real_index/real_index.js
+// pages/shop/shop.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    current_tab_index: "0"
-    
+
   },
 
   /**
@@ -63,9 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  tabChange(e) {
-    console.log('tab change', e)
-    
   }
 })

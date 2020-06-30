@@ -5,18 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-    list: [{
-      "pagePath": "/pages/real_index/real_index",
-      "text": "对话",
-      "iconPath": "/images/tabbar_icon_chat_default.png",
-      "selectedIconPath": "/images/tabbar_icon_chat_active.png"
-    },
-    {
-      "pagePath": "/pages/settings/settings",
-      "text": "设置",
-      "iconPath": "/images/tabbar_icon_setting_default.png",
-      "selectedIconPath": "/images/tabbar_icon_setting_active.png"
-    }]
+
   },
 
   /**
