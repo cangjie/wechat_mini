@@ -5,6 +5,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    /*
     wx.login({
       complete: (res) => {
         this.globalData.code = res.code
@@ -23,7 +24,7 @@ App({
           },
         })
       },
-    })
+    })*/
   },
   globalData: {
     userInfo: null,

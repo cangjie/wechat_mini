@@ -1,6 +1,28 @@
 <view class="page">
-    <view class="page__hd">
-        <view class="page__title">Tabbar</view>
-        <view class="page__desc">可用于自定义tabbar</view>
+    <view class="page__hd" style="background-color:#FFFFFF;width:750rpx;">
+        <view class="page__title" style="top-margin:10rpx;" >
+            <button  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+            <block wx:else>
+                <view class="page-section-spacing">
+                    <view class="flex-wrp" style="flex-direction:row;">
+                        <view class="flex-item demo-text-1">
+                            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                        </view>
+                        <view class="flex-item demo-text-2">
+                            <view class="flex-wrp" style="flex-direction:column;">
+                                <view class="flex-item demo-text-1" >
+                                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                                </view>
+                                <view class="flex-item demo-text-1" >
+                                    <text wx:if="{{cell!=''}}" class="userinfo-nickname" >{{cell}}</text>
+                                    <button wx:else open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="width:300rpx" >获取手机号</button>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="page__desc"></view>
     </view>
 </view>
