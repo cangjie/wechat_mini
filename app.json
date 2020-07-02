@@ -18,7 +18,10 @@
     "weui": true
   },
   "tabBar":{
+    "color": "#7A7E83",
     "selectedColor": "#000000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
     "list": [{
       "pagePath": "pages/real_index/real_index",
       "text": "社群",
