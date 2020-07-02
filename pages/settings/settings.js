@@ -1,18 +1,21 @@
 // pages/settings/settings.js
+var app = getApp()
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    session_ok: false,
+    cell: ""
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -26,7 +29,38 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    wx.checkSession({
+      success: (res) => {
+        var cell = app.globalData.cell.trim()
+        this.setData({
+          session_ok: true,
+          cell: cell
+        })
+      },
+      fail: (res) => {
+        wx.login({
+          complete: (res) => {
+            this.globalData.code = res.code
+            wx.request({
+              url: 'https://mini.luqinwenda.com/api/get_login_info.aspx?code=' + res.code,
+              data:{},
+              success:(res) => {
+                /*
+                this.globalData.session_key = res.data.session_key
+                this.globalData.open_id = res.data.openid
+                this.globalData.union_id = res.data.unionid
+                */
+              }
+            })
+            wx.getUserInfo({
+              complete: (res) => {
+                //this.globalData.userInfo = res.userInfo
+              },
+            })
+          }
+        })
+      }
+    })
   },
 
   /**

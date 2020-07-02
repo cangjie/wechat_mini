@@ -15,7 +15,6 @@ App({
             this.globalData.session_key = res.data.session_key
             this.globalData.open_id = res.data.openid
             this.globalData.union_id = res.data.unionid
-
           }
         })
         wx.getUserInfo({

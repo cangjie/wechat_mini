@@ -2,5 +2,5 @@
   "usingComponents": {
     "mp-tabbar": "/miniprogram_npm/weui-miniprogram/tabbar/tabbar"
   },
-  "navigationBarTitleText": "悦长大导航"
+  "navigationBarTitleText": "获取卢老师的签名"
 }
