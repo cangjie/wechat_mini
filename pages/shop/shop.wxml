@@ -1,2 +1,3 @@
 <!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+<input bindinput="formInputChange" data-field="amount" class="weui-input" placeholder="0.01"/>
+<button bindtap="pay"> 支 付 </button>

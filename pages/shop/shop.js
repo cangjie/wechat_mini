@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  pay: function() {
+    var timestamp = Date.parse(new Date())
+    var noneStr = Math.random().toString().replace('0.', '')
+    
   }
+
 })
